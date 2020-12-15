@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">My Application4</string>
+    <string name="text_from_res">Текст из ресурсов</string>
 </resources>

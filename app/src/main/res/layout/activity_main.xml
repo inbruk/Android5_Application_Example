@@ -1,85 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="216dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textView"
+        android:layout_below="@+id/null"
+        android:layout_marginTop="-26dp"
+        android:layout_marginBottom="-28dp"
+        android:scaleType="fitXY"
+        android:tint="#253CC32D"
+        tools:srcCompat="@tools:sample/avatars" />
+
     <TextView
         android:id="@+id/textView"
-        android:layout_width="165dp"
-        android:layout_height="22dp"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="48dp"
-        tools:layout_editor_absoluteY="38dp" />
+        android:layout_width="306dp"
+        android:layout_height="38dp"
+        android:layout_alignParentLeft="false"
+        android:layout_alignParentRight="false"
+        android:layout_centerInParent="true"
+        android:layout_centerVertical="false"
+        android:autoLink="all"
+        android:linksClickable="true"
+        android:text="@string/text_from_res"
+        android:textAllCaps="false"
+        android:textColor="#3F51B5"
+        android:textSize="12sp"
+        android:textStyle="bold|italic" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="50dp"
-        tools:layout_editor_absoluteY="80dp" />
+        android:layout_below="@+id/textView"
+        android:layout_marginTop="217dp"
+        android:onClick="OnClick_ShowToast"
+        android:text="Button" />
 
-    <Switch
-        android:id="@+id/switch1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Switch"
-        tools:layout_editor_absoluteX="60dp"
-        tools:layout_editor_absoluteY="240dp" />
+    <androidx.cardview.widget.CardView
 
-    <EditText
-        android:id="@+id/editTextTextPersonName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name"
-        tools:layout_editor_absoluteX="66dp"
-        tools:layout_editor_absoluteY="332dp" />
-
-    <EditText
-        android:id="@+id/editTextTextPassword"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPassword"
-        tools:layout_editor_absoluteX="62dp"
-        tools:layout_editor_absoluteY="410dp" />
-
-    <EditText
-        android:id="@+id/editTextTextEmailAddress"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textEmailAddress"
-        tools:layout_editor_absoluteX="54dp"
-        tools:layout_editor_absoluteY="484dp" />
-
-    <EditText
-        android:id="@+id/editTextPhone"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="phone"
-        tools:layout_editor_absoluteX="58dp"
-        tools:layout_editor_absoluteY="571dp" />
-
-    <RatingBar
-        android:id="@+id/ratingBar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="54dp"
-        tools:layout_editor_absoluteY="650dp" />
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="221dp"
-        tools:layout_editor_absoluteY="66dp"
-        tools:srcCompat="@tools:sample/avatars" />
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        android:layout_above="@+id/imageView"
+        android:layout_marginBottom="50dp"
+        app:cardElevation="15dp" />
+</RelativeLayout>
