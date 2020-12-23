@@ -1,55 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="216dp"
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/textView"
-        android:layout_below="@+id/null"
-        android:layout_marginTop="-26dp"
-        android:layout_marginBottom="-28dp"
-        android:scaleType="fitXY"
-        android:tint="#253CC32D"
-        tools:srcCompat="@tools:sample/avatars" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="306dp"
-        android:layout_height="38dp"
-        android:layout_alignParentLeft="false"
-        android:layout_alignParentRight="false"
-        android:layout_centerInParent="true"
-        android:layout_centerVertical="false"
-        android:autoLink="all"
-        android:linksClickable="true"
-        android:text="@string/text_from_res"
-        android:textAllCaps="false"
-        android:textColor="#3F51B5"
-        android:textSize="12sp"
-        android:textStyle="bold|italic" />
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/topAppBar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:title="some"
+            app:titleTextColor="@android:color/white"
+            app:menu="@menu/tap_app_bar"
+            app:navigationIcon="@drawable/ic_round_menu_24" />
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textView"
-        android:layout_marginTop="217dp"
-        android:onClick="OnClick_ShowToast"
-        android:text="Button" />
+    </com.google.android.material.appbar.AppBarLayout>
 
-    <androidx.cardview.widget.CardView
-
-        android:layout_width="300dp"
-        android:layout_height="200dp"
-        android:layout_above="@+id/imageView"
-        android:layout_marginBottom="50dp"
-        app:cardElevation="15dp" />
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
